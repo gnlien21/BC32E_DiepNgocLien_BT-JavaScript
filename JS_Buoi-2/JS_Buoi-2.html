@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Bài tập JS Buổi 2-3</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+      <h1>Bài 1: Tính tiền lương nhân viên</h1>
+      <div class="form-group">
+          <div class="row d-flex w-50">
+              <div class="col w-25">
+                <input class="form-control" id="luongMotNgay" type="number" placeholder="Nhập lương một ngày" />
+              </div>
+              <div class="col w-25">
+                <input class=form-control id=soNgayLam type="number" placeholder="Số ngày làm" />
+              </div>
+          </div>
+      </div>
+      <button class="btn btn-success" id="btnTinhLuong">Tính lương</button>
+      <div id="soTienLuong" class="alert alert-primary mt-3">👉</div>
+
+      <h1>Bài 2: Tính giá trị trung bình</h1>
+      <div class="form-group">
+        <div class="row d-flex">
+          <div class="col w-25">
+            <input class="form-control" id="soThuNhat" type="number" placeholder="nhập số dzô" />
+          </div>
+          <div class="col w-25">
+            <input class="form-control" id="soThuHai" type="number" placeholder="nhập số dzô" />
+          </div>
+          <div class="col w-25">
+            <input class="form-control" id="soThuBa" type="number" placeholder="nhập số dzô" />
+          </div>
+          <div class="col w-25">
+            <input class="form-control" id="soThuTu" type="number" placeholder="nhập số dzô" />
+          </div>
+          <div class="col w-25">
+            <input class="form-control" id="soThuNam" type="number" placeholder="nhập số dzô" />
+          </div>
+        </div>
+        <button id="btnTinhTB" class="btn btn-success mt-5">Tính giá trị trung bình</button>
+        <div id="giaTriTrungBinh" class="alert alert-success mt-5">👉 </div>
+      </div>
+
+      <h1>Bài 3: Đổi tiền</h1>
+      <div class="form-group">
+        <p>Bạn muốn đổi bao nhiêu $ ra VND?</p>
+        <p id="donGia">Giá USD hôm nay là:</p>
+        <input class="form-control" id="soTienUSD" type="number" placeholder="VD: 1000$" />
+        <button class="btn btn-success mt-5" id="doiTien">Đổi tiền</button>
+        <div id="ketQuaVND" class="alert alert-warning mt-5">Số tiền VND bạn nhận được là: </div>
+      </div>
+
+      <h1>Bài 4: Tính diện tích, chu vi hình chữ nhật</h1>
+      <div class="form-group w-50">
+        <input class="form-control" id="chieuDai" type="number" placeholder="nhập chiều dài" />
+        <input class="form-control" id="chieuRong" type="number" placeholder="nhập chiều rộng" />
+
+        <button id="tinhSP" class="btn btn-success mt-5">Tính</button>
+        <div id="ketQuaSP" class="alert alert-success mt-5"></div>
+      </div>
+      <h1>Bài 5: Tính tổng 2 ký số</h1>
+      <div class="form-group w-50">
+        <input class="form-control mt-5" id="soNguyen" type="number" placeholder="nhập số nguyên có 2 chữ số"/>
+        <button id="tongKySo" class="btn btn-success">Tính</button>
+        <div id="ketQua5" class="alert alert-danger mt-5"></div>
+      </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="./JS_Buoi-2.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
