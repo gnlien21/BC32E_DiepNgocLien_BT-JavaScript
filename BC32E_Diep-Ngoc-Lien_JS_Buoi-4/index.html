@@ -10,11 +10,110 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
   <body>
+
+    <div class="container mt-5">
+      <div>
+        <h3>Bài 1: Xuất 3 số theo thứ tự tăng dần</h3>
+        <div class="form-group row">
+          <div class="col-3">
+            <input class="form-control" id="soThu1" type="number" placeholder="Nhập số"/>
+          </div>
+          <div class="col-3">
+            <input class="form-control" id="soThu2" type="number" placeholder="Nhập số"/>
+          </div>
+          <div class="col-3">
+            <input class="form-control" id="soThu3" type="number" placeholder="Nhập số"/>
+          </div>
+          <div class="col-3">
+            <button class="btn btn-success" id="btnSapXep">Sắp Xếp</button>
+          </div>
+        </div>
+        <div id="ketQua_B1" class="alert alert-primary mt-2"></div>
+      </div>
+
+      <div class="mt-5">
+        <h3>Bài 2: Chương trình chào hỏi</h3>
+        <select class="form-control w-50" name="chaohoi" id="listChaoHoi">
+          <option value="" >Chọn thành viên</option>
+          <option value="B">Bố</option>
+          <option value="M">Mẹ</option>
+          <option value="A">Anh</option>
+          <option value="C">Chị</option>
+          <option value="E">Em</option>
+        </select>
+        <button class="btn btn-success mt-3" id="btnChaoHoi">Sin trào :D</button>
+        <div id="ketQua_B2" class="calert alert-primary mt-2"></div>
+      </div>
+
+      <div class="mt-5">
+        <h3>Bài 3: Đếm số chẵn lẻ</h3>
+          <div class="form-group row">
+            <div class="col-3">
+              <input class="form-control" id="num1" type="number" placeholder="Nhập số"/>
+            </div>
+            <div class="col-3">
+              <input class="form-control" id="num2" type="number" placeholder="Nhập số"/>
+            </div>
+            <div class="col-3">
+              <input class="form-control" id="num3" type="number" placeholder="Nhập số"/>
+            </div>
+            <div class="col-3">
+              <button class="btn btn-success" id="btnDemSo">Đếm</button>
+            </div>
+        
+          </div>
+          <div class="alert alert-primary" id="ketQua_B3"></div>
+      </div>
+
+      <div class="mt-5">
+        <h3>Bài 4: Đoán hình tam giác</h3>
+        <div class="form-group row">
+          <div class="col-3">
+            <input class="form-control" id="canh1" type="number" placeholder="Nhập độ dài cạnh"/>
+          </div>
+          <div class="col-3">
+            <input class="form-control" id="canh2" type="number" placeholder="Nhập độ dài cạnh"/>
+          </div>
+          <div class="col-3">
+            <input class="form-control" id="canh3" type="number" placeholder="Nhập độ dài cạnh"/>
+          </div>
+          <div class="col-3">
+            <button class="btn btn-success" id="btnDoan">Đoán tam giác</button>
+          </div>
+        </div>
+        <div id="ketQua_B4"></div>
+
+      </div>
+      <div class="mt-5">
+        <h3>Bài 5: Tìm ngày, tháng, năm của ngày tiếp theo</h3>
+        <div class="form-group row">
+          <div class="col-4">
+            <input class="form-control" id="ngay" type="number" placeholder="Nhập ngày"/>
+          </div>
+          <div class="col-4">
+            <input class="form-control" id="thang" type="number" placeholder="Nhập tháng"/>
+          </div>
+          <div class="col-4">
+            <input class="form-control" id="nam" type="number" placeholder="Nhập năm"/>
+          </div>
+        </div>
+        <div class="button row">
+          <button class="btn btn-success mx-5" id="homQua">Ngày hôm qua</button>
+          <button class="btn btn-success" id="ngayMai">Ngày mai</button>
+        </div>
+        <div id="ketQua_B5"></div>
+      </div>
+
+    </div>
+
+    
+    
       
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="./main.js"></script>
   </body>
 </html>
