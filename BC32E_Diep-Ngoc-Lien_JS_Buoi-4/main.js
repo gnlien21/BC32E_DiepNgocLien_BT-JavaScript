@@ -197,3 +197,64 @@ document.getElementById('ngayMai').onclick = function(){
 
     document.getElementById('ketQua_B5').innerHTML = ngay2 + '/' + thang2 + '/'+ nam2;
 }
+
+document.getElementById('homQua').onclick = function (){
+    //input: ngày, tháng, năm: number
+    var ngay = +document.getElementById('ngay').value;
+    var thang = +document.getElementById('thang').value;
+    var nam = +document.getElementById('nam').value;
+    //output: ngày, tháng, năm trước đó: number
+
+    var ngay1 = 0;
+    var thang1 = 0;
+    var nam1 = 0;
+
+    //progress:
+    
+    if (thang == 1){
+        if (ngay == 1){
+            ngay1 = 31;
+            thang1 = 12;
+            nam1 = nam - 1;
+        } else {
+            ngay1 = ngay - 1 ;
+            thang1 = 1;
+            nam1 = nam;
+        }
+    } else if (thang == 3){
+        if (ngay == 1 ) {
+            ngay1 = 28;
+            thang1 = 2;
+            nam1 = nam;
+        } else {
+            ngay1 = ngay - 1;
+            thang1 = thang;
+            nam1 = nam;
+        }
+    } else if (thang == 5 || thang == 7 || thang == 8 || thang == 10 || thang == 12){
+        if (ngay == 1){
+            ngay1 = 30;
+            thang1 = thang - 1;
+            nam1 = nam;
+        } else {
+            ngay1 = ngay - 1;
+            thang1 = thang;
+            nam1 = nam;
+        }
+    } else if (thang == 2 || thang == 4 || thang == 6 || thang == 9 || thang == 11) {
+        if (ngay == 1){
+            ngay1 = 31;
+            thang1 = thang - 1;
+            nam1 = nam;
+        } else {
+            ngay1 = ngay - 1;
+            thang1 = thang;
+            nam1 = nam;
+        }
+    } else {
+        ngay1 = 'unknown';
+        thang1 = 'unknown';
+        nam1 = 'unknown';
+    }
+    document.getElementById('ketQua_B5').innerHTML = ngay1 + '/' + thang1 + '/'+ nam1;
+}
