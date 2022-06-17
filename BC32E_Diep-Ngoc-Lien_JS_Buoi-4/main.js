@@ -508,29 +508,52 @@ document.getElementById('btnDocSo').onclick = function() {
 //BÀI 8: Tìm sinh viên xa trường nhất
 document.getElementById('btnTimToaDo').onclick = function (){
     //input: tên sv (string), tọa độ x1, y1 của sv, tọa độ x2, y2 cùa trường học (number)
-    var tenSV = '';
-    var x1 = 0;
-    var y1 = 0;
-    var x2 = 0;
-    var y2 = 0;
-    //output: tên sinh viên xa trường nhất (string)
+    var tenSV1 = document.getElementById('tenSV1').value;
+    var tenSV2 = document.getElementById('tenSV2').value;
+    var tenSV3 = document.getElementById('tenSV3').value;
 
+    var x1 = +document.getElementById('toaDox1').value;
+    var y1 = +document.getElementById('toaDoy1').value;
+    var x2 = +document.getElementById('toaDox2').value;
+    var y2 = +document.getElementById('toaDoy2').value;
+    var x3 = +document.getElementById('toaDox3').value;
+    var y3 = +document.getElementById('toaDoy3').value;
+    var x4 = +document.getElementById('toaDox4').value;
+    var y4 = +document.getElementById('toaDoy4').value;
+
+
+    //output: d1, d2, d3 : độ dài từ nhà tới trường (number); sinh viên xa trường nhất (string)
+    var a = 0;
+    var b = 0;
+    var c = 0;
+    var xaNhat = '';
     //progress:
 
+    //Tính d:
+    a = Math.sqrt(Math.pow(x4 - x1, 2) + Math.pow(y4 - y1, 2));
+    b = Math.sqrt(Math.pow(x4 - x2, 2) + Math.pow(y4 - y2, 2));
+    c = Math.sqrt(Math.pow(x4 - x3, 2) + Math.pow(y4 - y3, 2));
 
-var tenSV = document.getElementById('tenSV').value;
-var x1 = +document.getElementById('toaDox1').value;
-var y1 = +document.getElementById('toaDoy1').value;
-var x2 = +document.getElementById('toaDox2').value;
-var y2 = +document.getElementById('toaDoy2').value;
-var d = 0;
+    //So sánh quãng đường của 3 bạn:
 
-function timToaDo (tenSV, toaDox, toaDoy){
-    d = Math.SQRT2(Math.pow(x2-x1) + Math.pow(y2-y1));
+    if (a>b && b>c){
+        xaNhat = tenSV1;
+    } else if (a>b && c>b) {
+        xaNhat = tenSV1;
+    } else if (a > b && c > a){
+        xaNhat = tenSV3;
+    } else if (b > a && a >c){
+        xaNhat = tenSV2;
+    } else if (b>c && c>a){
+        xaNhat = tenSV2;
+    } else {
+        xaNhat = tenSV3;
+    }
+
+    document.getElementById('ketQua_B8').innerHTML = 'Sinh viên ở xa trường nhất là: ' + xaNhat;
 }
 
-return d;
 
 
 
-}
+
