@@ -1,4 +1,4 @@
-//Bài 1:
+//Bài 1: sắp xếp thứ tự số
 
 document.getElementById('btnSapXep').onclick = function(){
     //input: soThu1 : number, soThu2: number, soThu3" number
@@ -28,7 +28,7 @@ document.getElementById('btnSapXep').onclick = function(){
     document.getElementById('ketQua_B1').innerHTML = thuTu;
 }
 
-//Bài 2:
+//Bài 2: In ra lời chào
 
 
 document.getElementById('btnChaoHoi').onclick = function(){
@@ -64,7 +64,7 @@ document.getElementById('btnChaoHoi').onclick = function(){
      document.getElementById('ketQua_B2').innerHTML = loiChao;
 }
 
-//Bài 3:
+//Bài 3: đếm số chẵn lẻ
 
 document.getElementById('btnDemSo').onclick = function (){
     //input: num1, num2, num3 : number
@@ -91,7 +91,7 @@ document.getElementById('btnDemSo').onclick = function (){
     document.getElementById('ketQua_B3').innerHTML = 'số chẵn có: ' + soChan + ' số' + ' số lẻ có: ' + soLe + ' số';
 }
 
-//Bài 4:
+//Bài 4: đoán tam giác khi biết độ dài 3 cạnh
 
 document.getElementById('btnDoan').onclick = function(){
     //input: độ dài 3 cạnh tam giác: number
@@ -118,7 +118,7 @@ document.getElementById('btnDoan').onclick = function(){
     document.getElementById('ketQua_B4').innerHTML = tenTamGiac;
 }
 
-//Bài 5:
+//Bài 5: tính ngày/tháng/năm hôm qua và ngày mai
 
 document.getElementById('ngayMai').onclick = function(){
     //input: ngày, tháng, năm: number
@@ -257,4 +257,280 @@ document.getElementById('homQua').onclick = function (){
         nam1 = 'unknown';
     }
     document.getElementById('ketQua_B5').innerHTML = ngay1 + '/' + thang1 + '/'+ nam1;
+}
+
+
+//BÀI 6: tính số ngày khi có tháng + năm
+
+document.getElementById('btnTinhSoNgay').onclick = function () {
+    //input: month (number), year (number)
+    var month = +document.getElementById('month').value;
+    var year = +document.getElementById('year').value;
+    //output: soNgay (number)
+    var soNgay = 0;
+
+    //progress:
+
+    if (year % 4 === 0 && year % 100 !== 0 || year % 400 === 0) {
+        switch (month) {
+            case 1: {
+                soNgay = 31;
+            }; break;
+            case 2: {
+                soNgay = 29;
+            };break;
+            case 3: {
+                soNgay = 31;
+            };break;
+            case 4: {
+                soNgay = 30;
+            };break;
+            case 5: {
+                soNgay = 31;
+            };break;
+            case 6: {
+                soNgay = 30;
+            };break;
+            case 7: {
+                soNgay = 31;
+            };break;
+            case 8: {
+                soNgay = 31;
+            };break;
+            case 9: {
+                soNgay = 30;
+            };break;
+            case 10: {
+                soNgay = 31;
+            };break;
+            case 11: {
+                soNgay = 30;
+            };break;
+            case 12: {
+                soNgay = 31;
+            };break;
+            default: {
+                soNgay = 'unknown';
+            }
+        }
+    } else {
+        switch (month) {
+            case 1: {
+                soNgay = 31;
+            }; break;
+            case 2: {
+                soNgay = 28;
+            };break;
+            case 3: {
+                soNgay = 31;
+            };break;
+            case 4: {
+                soNgay = 30;
+            };break;
+            case 5: {
+                soNgay = 31;
+            };break;
+            case 6: {
+                soNgay = 30;
+            };break;
+            case 7: {
+                soNgay = 31;
+            };break;
+            case 8: {
+                soNgay = 31;
+            };break;
+            case 9: {
+                soNgay = 30;
+            };break;
+            case 10: {
+                soNgay = 31;
+            };break;
+            case 11: {
+                soNgay = 30;
+            };break;
+            case 12: {
+                soNgay = 31;
+            };break;
+            default: {
+                soNgay = 'unknown';
+            }
+        }
+    }
+
+    document.getElementById('ketQua_B6').innerHTML = 'Số ngày của tháng ' + month + ' là: ' + soNgay;
+}
+
+
+//BÀI 7: In ra cách đọc của số nguyên 3 chữ số
+document.getElementById('btnDocSo').onclick = function() {
+    //input: soNguyen(number)
+    var soNguyen = +document.getElementById('soNguyen').value;
+
+    //output: cách đọc (string)
+
+    var docSo = '';
+    var docHangTram = '';
+    var docHangChuc = '';
+    var docDonVi = '';
+
+    //progress:
+
+    //tìm số hàng trăm, chục và đơn vị:
+
+    var hangTram = 0;
+    var hangChuc = 0;
+    var hangDonVi = 0;
+
+    hangTram = Math.floor(soNguyen/100);
+    hangChuc = Math.floor(soNguyen%100/10);
+    hangDonVi = soNguyen%10;
+
+    
+
+    switch (hangTram) {
+        case 1: {
+            docHangTram = 'Một trăm';
+        };break;
+        case 2: {
+            docHangTram = 'Hai trăm';
+        };break;
+        case 3: {
+            docHangTram = 'Ba trăm';
+        };break;
+        case 4: {
+            docHangTram = 'Bốn trăm';
+        };break;
+        case 5: {
+            docHangTram = 'Năm trăm';
+        };break;
+        case 6: {
+            docHangTram = 'Sáu trăm';
+        };break;
+        case 7: {
+            docHangTram = 'Bảy trăm';
+        };break;
+        case 8: {
+            docHangTram = 'Tám trăm';
+        };break;
+        case 9: {
+            docHangTram = 'Chín trăm';
+        };break;
+        default: {
+            docHangTram = 'error';
+        }
+    }
+
+    switch (hangChuc) {
+        case 0: {
+            docHangChuc = 'lẻ';
+        };break;
+        case 1: {
+            docHangChuc= 'mười';
+        };break;
+        case 2: {
+            docHangChuc = 'hai mươi';
+        };break;
+        case 3: {
+            docHangChuc = 'ba mươi';
+        };break;
+        case 4: {
+            docHangChuc = 'bốn mươi';
+        };break;
+        case 5: {
+            docHangChuc = 'năm mươi';
+        };break;
+        case 6: {
+            docHangChuc = 'sáu mươi';
+        };break;
+        case 7: {
+            docHangChuc = 'bảy mươi';
+        };break;
+        case 8: {
+            docHangChuc = 'tám mươi';
+        };break;
+        case 9: {
+            docHangChuc = 'chín mươi';
+        };break;
+        default: {
+            docHangChuc = 'error';
+        }
+    }
+    switch (hangDonVi) {
+        case 0: {
+            docDonVi = 'mươi';
+        };break;
+        case 1: {
+            if (hangChuc == 0 || hangChuc == 1){
+                docDonVi = 'một';
+            } else {
+                docDonVi = 'mốt';
+            }
+        };break;
+        case 2: {
+            docDonVi = 'hai';
+        };break;
+        case 3: {
+            docDonVi = 'ba';
+        };break;
+        case 4: {
+            docDonVi = 'bốn';
+        };break;
+        case 5: {
+            if(hangChuc == 0) {
+                docDonVi = 'năm';
+            } else {
+                docDonVi = 'lăm';
+            }
+        };break;
+        case 6: {
+            docDonVi = 'sáu';
+        };break;
+        case 7: {
+            docDonVi = 'bảy';
+        };break;
+        case 8: {
+            docDonVi = 'tám';
+        };break;
+        case 9: {
+            docDonVi = 'chín';
+        };break;
+        default: {
+            docDonVi = 'error';
+        }
+    }
+
+    docSo = docHangTram + ' '+ docHangChuc+ ' ' + docDonVi;
+
+    document.getElementById('ketQua_B7').innerHTML = docSo;
+    
+}
+
+//BÀI 8: Tìm sinh viên xa trường nhất
+document.getElementById('btnTimToaDo').onclick = function (){
+    //input: tên sv (string), tọa độ x1, y1 của sv, tọa độ x2, y2 cùa trường học (number)
+    var tenSV = '';
+    var x1 = 0;
+    var y1 = 0;
+    var x2 = 0;
+    var y2 = 0;
+    //output: tên sinh viên xa trường nhất (string)
+
+    //progress:
+
+
+var tenSV = document.getElementById('tenSV').value;
+var x1 = +document.getElementById('toaDox1').value;
+var y1 = +document.getElementById('toaDoy1').value;
+var x2 = +document.getElementById('toaDox2').value;
+var y2 = +document.getElementById('toaDoy2').value;
+var d = 0;
+
+function timToaDo (tenSV, toaDox, toaDoy){
+    d = Math.SQRT2(Math.pow(x2-x1) + Math.pow(y2-y1));
+}
+
+return d;
+
+
+
 }

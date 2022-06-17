@@ -81,7 +81,7 @@
             <button class="btn btn-success" id="btnDoan">Đoán tam giác</button>
           </div>
         </div>
-        <div id="ketQua_B4"></div>
+        <div id="ketQua_B4" class="alert alert-primary"></div>
 
       </div>
       <div class="mt-5">
@@ -101,8 +101,10 @@
           <button class="btn btn-success mx-5" id="homQua">Ngày hôm qua</button>
           <button class="btn btn-success" id="ngayMai">Ngày mai</button>
         </div>
-        <div id="ketQua_B5"></div>
+        <div id="ketQua_B5" class="alert alert-primary"></div>
       </div>
+
+      
       <div class="mt-5">
         <h3>Bài 6: Tính số ngày trong 1 tháng</h3>
         <div class="form-group row">
@@ -113,11 +115,70 @@
             <input class="form-control" id="year" type="number" placeholder="Nhập năm" />
           </div>
           <div class="col-4">
-            <button class="btn btn-success mt-5" id="btnTinhSoNgay">Tính ngày</button>
+            <button class="btn btn-success" id="btnTinhSoNgay">Tính ngày</button>
           </div>
         </div>
-        <div id="ketQua_B6"></div>
+        <div id="ketQua_B6" class="alert alert-primary"></div>
 
+      </div>
+
+      <div class="mt-5">
+        <h3>Bài 7: Viết chương trình nhập vào số nguyên 3 chữ số. In ra cách đọc nó</h3>
+        <input id="soNguyen" type="number" class="form-control w-25" placeholder="Nhập số 3 chữ số"/>
+        <button class="btn btn-success mt-3" id="btnDocSo">Đọc số</button>
+        <div class="alert alert-primary" id="ketQua_B7"></div>
+      </div>
+
+      <div class="mt-5">
+        <h3>BT8: Tìm sinh viên xa trường nhất</h3>
+        <div class="form-group row">
+          <h4 class="col-12">Sinh viên 1</h4>
+          <div class="col-4">
+            <input class="form-control" id="tenSV" placeholder="Nhập tên"/>
+          </div>
+          <div class="col-4">
+            <input class="form-control" id="toaDox1" type="number" placeholder="Nhập tọa độ"/>
+          </div>
+          <div class="col-4">
+            <input class="form-control" id="toaDoy1" type="number" placeholder="Nhập tọa độ"/>
+          </div>
+        </div>
+        <div class="form-group row">
+          <h4 class="col-12">Sinh viên 2</h4>
+          <div class="col-4">
+            <input class=form-control id="tenSV" placeholder="Nhập tên"/>
+          </div>
+          <div class="col-4">
+            <input class="form-control" id="toaDox1" type="number" placeholder="Nhập tọa độ"/>
+          </div>
+          <div class="col-4">
+            <input class="form-control" id="toaDoy1" type="number" placeholder="Nhập tọa độ"/>
+          </div>
+        </div>
+        <div class="form-group row">
+          <h4 class="col-12">Sinh viên 3</h4>
+          <div class="col-4">
+            <input class=form-control id="tenSV" placeholder="Nhập tên"/>
+          </div>
+          <div class="col-4">
+            <input class="form-control" id="toaDox1" type="number" placeholder="Nhập tọa độ"/>
+          </div>
+          <div class="col-4">
+            <input class="form-control" id="toaDoy1" type="number" placeholder="Nhập tọa độ"/>
+          </div>
+        </div>
+        <div class="form-group row">
+          <h4 class="col-12">Trường học</h4>
+          
+          <div class="col-4">
+            <input class="form-control" id="toaDox2" type="number" placeholder="Nhập tọa độ"/>
+          </div>
+          <div class="col-4">
+            <input class="form-control" id="toaDoy2" type="number" placeholder="Nhập tọa độ"/>
+          </div>
+        </div>
+        <button id="btnTimToaDo" class="btn btn-success my-3">Tìm tọa độ</button>
+        <div class="alert alert-primary" id="ketQua_B8"></div>
       </div>
 
     </div>
